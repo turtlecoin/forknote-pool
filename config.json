@@ -19,7 +19,7 @@
   "poolServer": {
     "enabled": true,
     "clusterForks": "auto",
-    "poolAddress": "TRTLv3mnq2wS6GepH6nb628jEjFseeojACYToJ1BXaZNNEvLkzW327zTVCh7ncGtS2MU2usGNq9ygVwiCTTft9QkN3t5P2Xqv3f",
+    "poolAddress": "TTRTLuzpLkiAQB2eThbEy7hA13FysVRFJsXfy5wT45r2X6JgznEHdQMjMLq1qjUPEszCaKajNioRUsA2Twxma6W9EjSH5Ws9tWGd",
     "blockRefreshInterval": 1000,
     "minerTimeout": 3600,
     "ports": [
@@ -38,12 +38,7 @@
         "difficulty": 10000,
         "desc": "High end hardware"
       },
-      {
-        "port": 8888,
-        "difficulty": 10000,
-        "desc": "Hidden port",
-        "hidden": true
-      }
+     
     ],
     "varDiff": {
       "minDiff": 100,

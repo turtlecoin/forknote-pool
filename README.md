@@ -517,6 +517,12 @@ var api_blockexplorer = "http://daemonhost.com:1118";
 ```
 
 
+If having issues installing at npm update try using
+```
+npm config set strict-ssl false
+```
+
+
 Credits
 ===
 

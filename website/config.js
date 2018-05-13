@@ -1,61 +1,50 @@
-var api = "http://poolhost.com:1117";
+var api = "http://turtle.imhard4.men:8117";
 
-var api_blockexplorer = "http://daemonhost.com:1118";
+var api_blockexplorer = "";
 
-var poolHost = "poolhost.com";
+var poolHost = "turtle.imhard4.men";
 
-var irc = "irc.freenode.net/#poolhost";
+var irc = "";
 
-var email = "support@poolhost.com";
+var email = "";
 
 var cryptonatorWidget = ["{symbol}-BTC", "{symbol}-USD", "{symbol}-EUR"];
 
-var easyminerDownload = "https://github.com/zone117x/cryptonote-easy-miner/releases/";
+var easyminerDownload = "";
 
-var blockchainExplorer = "http://chainradar.com/{symbol}/block/{id}";
+var blockchainExplorer = "https://blocks.turtle.link/?hash={id}#blockchain_block";
 
-var transactionExplorer = "http://chainradar.com/{symbol}/transaction/{id}";
+var transactionExplorer = "https://blocks.turtle.link/?hash={id}#blockchain_transaction";
 
-var themeCss = "themes/default-theme.css";
+var themeCss = "themes/motherboard-dark-theme.css";
 
 var networkStat = {
-    "bcn": [
-        ["bcn.mypool.online", "http://bcn.mypool.online:8084"],
-        ["democats.org", "http://pool.democats.org:7603"]
-    ],
-    "bip": [
-        ["bip.mypool.online", "http://bip.mypool.online:18874"],
-        ["democats.org", "http://pool.democats.org:7693"],
-        ["bip.cryptonotepool.com", "http://5.189.135.137:8121"],
-        ["bip.ms-pool.net.ua", "http://bip.ms-pool.net.ua:8117"],
-        ["bip.crypto-coins.club", "http://bip.crypto-coins.club:8118"]
-    ],
-    "coal": [
-        ["coal.mypool.online", "http://coal.mypool.online:7704"],
-        ["democats.org", "http://pool.democats.org:7703"]
-    ],
-    "dsh": [
-        ["dsh.mypool.online", "http://dsh.mypool.online:29084"],
-        ["democats.org", "http://pool.democats.org:7613"]
-    ],
-    "fcn": [
-        ["fcn.mypool.online", "http://fcn.mypool.online:24084"]
-    ],
-    "krb": [
-        ["krb.mypool.online", "http://krb.mypool.online:32351"],
-        ["democats.org", "http://pool2.democats.org:7673"],
-        ["pool.karbowanec.com", "http://pool.karbowanec.com:8117"],
-        ["pool2.karbowanec.com", "http://pool2.karbowanec.com:8117"],
-        ["krb.sberex.com", "http://krb.sberex.com:7006"],
-        ["krb.crypto-coins.club", "http://krb.crypto-coins.club:8118"],
-        ["krb.cryptonotepool.com", "http://5.189.135.137:8618"],
-        ["krbpool.ml", "http://krbpool.ml:8117"]
-    ],
-    "qcn": [
-        ["qcn.mypool.online", "http://qcn.mypool.online:23084"]
-    ],
-    "xci": [
-        ["xci.mypool.online", "http://xci.mypool.online:42004"],
-        ["xci.cryptonotepool.com", "http://5.189.135.137:8119"]
+    "trtl": [
+        ["trtlpool.ninja", "https://blocks.turtle.link/pool/trtlpool.ninja"],
+        // ["pool.trtl.me", "https://blocks.turtle.link/pool/pool.trtl.me"],
+        ["cryptoknight.cc/turtle", "https://blocks.turtle.link/pool/cryptoknight.cc/turtle"],
+        ["z-pool.com", "https://blocks.turtle.link/pool/z-pool.com"],
+        ["ny.minetrtl.us", "https://blocks.turtle.link/pool/ny.minetrtl.us"],
+        ["turtle.atpool.party", "https://blocks.turtle.link/pool/turtle-eu.atpool.party"],
+        // ["trtl.radicaldelta.org", "https://blocks.turtle.link/pool/trtl.radicaldelta.org"],
+        ["slowandsteady.fun", "https://blocks.turtle.link/pool/slowandsteady.fun"],
+        ["turtlecoinpool.ddns.net", "https://blocks.turtle.link/pool/turtlecoinpool.ddns.net"],
+        ["hk.turtlepool.space", "https://hk.turtlepool.space/api"],
+        ["us.turtlepool.space", "https://us.turtlepool.space/api"],
+        ["eu.turtlepool.space", "https://eu.turtlepool.space/api"],
+        //["xk.is", "https://xk.is/api"],
+        ["trtl.mine2gether.com", "https://trtl.mine2gether.com/api"],
+        // ["pool.turtleco.in", "https://pool.turtleco.in/api"],
+        ["auspool.turtleco.in", "https://auspool.turtleco.in/api"],
+        ["trtl.flashpool.club", "https://api.trtl.flashpool.club"],
+        ["etnchina.io/trtl", "https://blocks.turtle.link/pool/etnchina.io"],
+        // ["trtl.fetch.cash", "https://trtl.fetch.cash:16119"],
+        // ["turtle.spacepools.org", "https://turtle.spacepools.org/api"],
+        ["turtlecoinpool.ml", "https://turtlecoinpool.ml:8443"],
+        ["turtle.mining.garden", "https://turtle.mining.garden:8117"],
+        //["turtle.poolmining.us", "https://blocks.turtle.link/pool/turtle.poolmining.us"],
+        ["turtlebay.fun", "https://blocks.turtle.link/pool/turtlebay.fun"],
+        ["trtl.blockchainera.net", "https://blocks.turtle.link/pool/trtl.blockchainera.net"],
+        ["trtl.ninja", "https://trtl.ninja/api"]
     ]
 };

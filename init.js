@@ -174,6 +174,13 @@ function spawnPoolWorkers(){
                         }
                     });
                     break;
+                case 'banAddress':
+                    Object.keys(cluster.workers).forEach(function(id) {
+                        if (cluster.workers[id].type == 'pool'){
+                            cluster.workers[id].send({type: 'banAddress', login: msg.login});
+                        }
+                    });
+                    break;
             }
         });
     };

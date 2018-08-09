@@ -66,7 +66,12 @@
     },
     "banning": {
       "enabled": true,
-      "addressbanning": true,
+      "time": 600,
+      "invalidPercent": 25,
+      "checkThreshold": 30
+    },
+    "addresBanning": {
+      "enabled": true,
       "time": 600,
       "invalidPercent": 25,
       "checkThreshold": 30

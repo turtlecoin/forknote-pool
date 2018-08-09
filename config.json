@@ -70,7 +70,7 @@
       "invalidPercent": 25,
       "checkThreshold": 30
     },
-    "addresBanning": {
+    "addressBanning": {
       "enabled": true,
       "time": 600,
       "invalidPercent": 25,

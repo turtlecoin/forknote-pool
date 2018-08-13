@@ -174,6 +174,13 @@ function spawnPoolWorkers(){
                         }
                     });
                     break;
+                case 'shareTrust':
+                    Object.keys(cluster.workers).forEach(function(id) {
+                        if (cluster.workers[id].type === 'pool' && cluster.workers[id].forkId != worker.forkId){
+                            cluster.workers[id].send({type: 'shareTrust', ip: msg.ip, address: msg.address, shareValidated: msg.shareValidated});
+                        }
+                    });
+                    break;
             }
         });
     };

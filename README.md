@@ -234,6 +234,7 @@ Explanation for each field:
       "penaltyStepUpWindow": 30, //The penalty steps up a maximum of penaltyMultiplierStep every penaltyStepUpWindow seconds and only on share submission.
       "penaltyStepDownWindow": 120, //The penalty steps down a maximum of penaltyMultiplierStep every penaltyStepDownWindow seconds and only on share submission.
       "maxShareWindow": 300, //Must Submit within this window or minUntrustedSeconds, minUntrustedShares and Probability are reset.
+      "maxIPCRate": 15, //The minimum amount of seconds between sharing a miners shareTrust data between pool threads.
       "maxAge": 604800 //Maximum seconds to retain dissconnected miner shareTrust data in memory.
     },
 

@@ -71,6 +71,7 @@
       "penaltyStepUpWindow": 30,
       "penaltyStepDownWindow": 120,
       "maxShareWindow": 300,
+      "maxIPCRate": 15,
       "maxAge": 604800
     },
     "banning": {

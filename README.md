@@ -93,7 +93,7 @@ Usage
 * [Node.js](http://nodejs.org/) v10.x+ ([follow these installation instructions](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions))
 * [Redis](http://redis.io/) key-value store v2.6+ ([follow these instructions](http://redis.io/topics/quickstart))
 * libssl required for the node-multi-hashing module
-  * For Ubuntu: `sudo apt-get install libssl-dev`
+  * For Ubuntu: `sudo apt-get install -y libssl-dev`
 
 
 ##### Seriously
@@ -108,7 +108,7 @@ you are using - a good place to start with redis is [data persistence](http://re
 Installing pool on different Linux distributives is different because it depends on system default components and versions. For now the easiest way to install pool is to use Ubuntu 14 LTS. Thus, all you had to do in order to prepare Ubunty 14 for pool installation is to run:
 
 ```bash
-sudo apt-get install git build-essential redis-server libboost1.55-all-dev cmake libssl-dev node-gyp
+sudo apt-get install -y git build-essential redis-server libboost1.55-all-dev cmake libssl-dev node-gyp
 ```
 
 

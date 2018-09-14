@@ -1,9 +1,9 @@
 sudo: false
 language: node_js
 node_js:
-  - '0.10'
   - '6'
   - '8'
+  - '10'
 before_install:
   - sudo apt-get update -y
   - sudo apt-get install libboost1.55-all-dev libssl-dev

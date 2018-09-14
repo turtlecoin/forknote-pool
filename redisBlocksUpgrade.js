@@ -14,7 +14,7 @@ var redis = require('redis')
 
 require('./lib/configReader.js')
 
-var apiInterfaces = require('./lib/apiInterfaces.js')(config.daemon, config.wallet)
+var apiInterfaces = require('./lib/apiInterfaces.js')(global.config.daemon, global.config.wallet)
 
 function log (severity, system, text, data) {
   var formattedMessage = text
@@ -29,10 +29,10 @@ function log (severity, system, text, data) {
 
 var logSystem = 'reward script'
 
-var redisClient = redis.createClient(config.redis.port, config.redis.host)
+var redisClient = redis.createClient(global.config.redis.port, global.config.redis.host)
 
 function getTotalShares (height, callback) {
-  redisClient.hgetall(config.coin + ':shares:round' + height, function (err, workerShares) {
+  redisClient.hgetall(global.config.coin + ':shares:round' + height, function (err, workerShares) {
     if (err) {
       callback(err)
       return
@@ -48,7 +48,7 @@ function getTotalShares (height, callback) {
 
 async.series([
   function (callback) {
-    redisClient.smembers(config.coin + ':blocksUnlocked', function (error, result) {
+    redisClient.smembers(global.config.coin + ':blocksUnlocked', function (error, result) {
       if (error) {
         log('error', logSystem, 'Error trying to get unlocke blocks from redis %j', [error])
         callback()
@@ -90,12 +90,12 @@ async.series([
         })
       }, function (err, blocks) {
         if (blocks.length === 0) {
-          log('info', logSystem, 'No unlocked blocks')
+          log('info', logSystem, 'No unlocked blocks: %s', [err])
           callback()
           return
         }
 
-        var zaddCommands = [config.coin + ':blocks:matured']
+        var zaddCommands = [global.config.coin + ':blocks:matured']
 
         for (var i = 0; i < blocks.length; i++) {
           var block = blocks[i]
@@ -123,7 +123,7 @@ async.series([
     })
   },
   function (callback) {
-    redisClient.smembers(config.coin + ':blocksPending', function (error, result) {
+    redisClient.smembers(global.config.coin + ':blocksPending', function (error, result) {
       if (error) {
         log('error', logSystem, 'Error trying to get pending blocks from redis %j', [error])
         callback()
@@ -145,11 +145,13 @@ async.series([
           serialized: item
         }
         getTotalShares(block.height, function (err, shares) {
+          log('error', logSystem, 'Error trying to get total shares %s', [err])
           block.shares = shares
           mapCback(null, block)
         })
       }, function (err, blocks) {
-        var zaddCommands = [config.coin + ':blocks:candidates']
+        log('error', logSystem, 'some kind of error occured %s', [err])
+        var zaddCommands = [global.config.coin + ':blocks:candidates']
 
         for (var i = 0; i < blocks.length; i++) {
           var block = blocks[i]

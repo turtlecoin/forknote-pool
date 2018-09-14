@@ -1,0 +1,10 @@
+sudo: false
+language: node_js
+node_js:
+  - '0.10'
+  - '4'
+  - '6'
+  - '8'
+before_install:
+  - sudo apt-get update -y
+  - sudo apt-get install libboost1.55-all-dev

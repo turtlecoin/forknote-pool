@@ -1,12 +1,10 @@
-turtle-pool (for nodejs 10.x)
+turtle-pool (for NodeJS LTS)
 ====================
 Formerly known as cryptonote-forknote-pool, forked from Forknote Project.
 
 High performance Node.js (with native C addons) mining pool for Cryptonote based coins, created with the Forknote software such as Bytecoin, Dashcoin, etc..
 
 Comes with lightweight example front-end script which uses the pool's AJAX API.
-
-
 
 #### Table of Contents
 * [Features](#features)
@@ -90,7 +88,7 @@ Usage
 #### Requirements
 * Turtlecoind daemon
 * walletd
-* [Node.js](http://nodejs.org/) v10.x+ ([follow these installation instructions](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions))
+* [Node.js](http://nodejs.org/) LTS (6,8,10) ([follow these installation instructions](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions))
 * [Redis](http://redis.io/) key-value store v2.6+ ([follow these instructions](http://redis.io/topics/quickstart))
 * libssl required for the node-multi-hashing module
   * For Ubuntu: `sudo apt-get install libssl-dev`

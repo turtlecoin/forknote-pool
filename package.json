@@ -7,9 +7,6 @@
         "type": "git",
         "url": "https://github.com/forknote/forknote-pool"
     },
-    "scripts": {
-      "test": "npm update"
-    },
     "dependencies": {
         "async": "1",
         "base58-native": "*",

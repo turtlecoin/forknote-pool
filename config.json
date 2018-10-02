@@ -115,7 +115,10 @@
         "port": 8117,
         "blocks": 30,
         "payments": 30,
-        "password": "your_password"
+        "password": "your_password",
+        "https_port" : 8118,
+        "path_privkey" : "",
+        "path_fullchain" :""
     },
 
     "daemon": {

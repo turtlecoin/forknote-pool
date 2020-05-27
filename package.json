@@ -18,12 +18,14 @@
         "base58-native": "*",
         "bignum": "*",
         "cli-color": "^1.4.0",
+        "cryptonight-hashing": "git://github.com/uPlexa/node-cryptonight-hashing",
         "dateformat": "*",
         "redis": "*",
         "safe-buffer": "^5.1.2",
         "turtlecoin-cryptonote-util": "0.0.7",
-        "turtlecoin-multi-hashing": "0.0.19",
-        "turtlecoin-utils": "0.0.13"
+        "turtlecoin-utils": "0.0.13",
+        "wrkzcoin-multi-hashing": "0.0.19",
+        "yarn": "^1.22.4"
     },
     "engines": {
         "node": ">=6"

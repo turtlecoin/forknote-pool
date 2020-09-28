@@ -15,14 +15,13 @@
     },
     "dependencies": {
         "async": "^3.2.0",
-        "base58-native": "*",
-        "bignum": "^0.13.1",
+        "big-integer": "^1.6.48",
         "cli-color": "^2.0.0",
         "dateformat": "*",
         "redis": "^3.0.2",
         "safe-buffer": "^5.2.1",
         "turtlecoin-cryptonote-util": "0.0.8",
-        "turtlecoin-utils": "^2.0.2"
+        "turtlecoin-utils": "^3.0.4"
     },
     "engines": {
         "node": ">=6"
